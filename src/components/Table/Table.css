@@ -1,0 +1,69 @@
+.table-container {
+	width: 100%;
+	overflow-x: auto;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
+}
+
+.responsive-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+.responsive-table thead {
+	background-color: #3498db;
+}
+
+.responsive-table th,
+.responsive-table td {
+	padding: 12px 15px;
+	text-align: left;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.responsive-table th {
+	font-weight: bold;
+	color: #000000;
+}
+
+.responsive-table tr:hover {
+	background-color: #f9f9f9;
+	transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width: 600px) {
+	.table-container {
+		width: 100%;
+		overflow-x: auto;
+		box-shadow: none;
+		border-radius: 12px;
+	}
+
+	.responsive-table thead {
+		display: none;
+	}
+
+	.responsive-table tr {
+		display: block;
+		margin-bottom: 10px;
+		border: 1px solid #ddd;
+		border-radius: 12px;
+	}
+
+	.responsive-table td {
+		display: block;
+		text-align: right;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.responsive-table td::before {
+		content: attr(data-column);
+		float: left;
+		font-weight: bold;
+	}
+
+	.responsive-table td:last-child {
+		border-bottom: none;
+	}
+}

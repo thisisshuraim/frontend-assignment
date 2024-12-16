@@ -1,49 +1,19 @@
 # Frontend Assignment
+Frontend assignment for the application for Senior Frontend Engineer at SaaS Labs, Bangalore.
 
+# Key Points
+- All API logic resides in a Utils file at `api/utils.js` for abstraction and reusability.
+- All UI logic resides in a Utils file at `ui/utils.j`s for abstraction and reusability.
+- Common code logic resides in a Utils file at `utils.js` for abstraction and reusability.
+- All pagination logic resides in a Hook at hooks/usePagination.jsx for better abstraction and reusability.
+- All screens/pages reside in `pages` directory. For now, only one page exists.
+- Individual components and sub components reside in `components` directory.
+- All possible constant and reused strings moved to individual `constants.js` files, for better maintainability.
+- API response patched to a simpler object type for easier parsing and better performance.
+- Used mappers as much as possible, to allow extremely easy additions of new keys and columns to show the user.
+- Used more generic prop types (i.e not specific to projects) for TableView, Table and Pagination component, to allow using those for future use cases (i.e any and all cases other than projects as well).
+- Showing loader when API call is pending for better UX.
+- Showing an error component when there are no projects available, as well providing an option to refresh data by recalling API, for better UX.
 
-## Assignment
-
-You are required to fetch the details of the highly-rated kickstarter projects by implementing an AJAX call to their APIs.
-
-Use the web API (link : https://raw.githubusercontent.com/saaslabsco/frontend-assignment/refs/heads/master/frontend-assignment.json) ) to fetch the details of specific projects.
-
-## Minimum Requirements
-
-1. Create a table and list the following three attributes for all the projects:
-    * S.No.
-    * Percentage funded
-    * Amount pledged
-
-1. Ensure that the UI is aesthetically pleasing to gain extra points.
-1. Implement pagination with maximum 5 records per page.
-
-### Expected Output format
-
-| **S.No.** | **Percentage funded** | **Amount pledged** |
-|-----------|-----------------------|--------------------|
-| 0         | 186                   | 15283              |
-
-
-## Good to have
-
-1. Unit tests.
-1. Accessibility.
-
-
-## Steps for submission
-
-1. Fork this repo.
-1. Do changes to the above assignment.
-1. Email the assignment back to us with:
-    1. Link of the open source repo.
-    1. Link of the assignment hosted online. (You can use any free tools to host this assignment, eg. vercel, netlify or heroku). It should be accessible online for atleast 7 days.
-
-
-## Frameworks Allowed
-1. React/Vanilla JS for JavaScript
-1. No framework for CSS. Only Raw CSS is allowed.
-
-## Note
-
-1. Result on platforms like codesandbox, replit are not accepted. 
-1. Private unaccessible links will lead to rejection.
+# Deployed Vercel App
+This project is deployed on Vercel [here](https://frontend-assignment-git-master-thisisshuraims-projects.vercel.app/).
